@@ -7,9 +7,7 @@
 
 if (-not (Get-InstalledModule -Name Microsoft.Graph -ErrorAction SilentlyContinue)) {
     Install-Module -Name Microsoft.Graph -Scope CurrentUser -Force
-} else {
-    Update-Module -Name Microsoft.Graph -Force
-}
+} 
 
 Connect-MgGraph -Scopes "Policy.Read.All"
 $info = Get-MgPolicyCrossTenantAccessPolicyPartner -CrossTenantAccessPolicyConfigurationPartnerTenantId $externalTenantID
