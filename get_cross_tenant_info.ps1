@@ -66,4 +66,3 @@ write-host 'User Access:' $outbounddirectusers.AccessType
 Write-Host "Targets: $($outbounddirectusertargets.target -join ', ')"
 Write-Host "Target Types: $($outbounddirectusertargets.TargetType -join ', ')"
 
-Disconnect-MgGraph
